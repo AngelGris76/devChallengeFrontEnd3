@@ -1,0 +1,14 @@
+.menuBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 20%;
+  min-width: 220px;
+}
+
+@media screen and (max-width: 743px) {
+  .menuBar {
+    display: none;
+  }
+}

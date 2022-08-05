@@ -1,0 +1,37 @@
+.completeLogo {
+  height: 2rem;
+
+  color: red;
+}
+
+@media screen and (max-width: 743px) {
+  .completeLogo {
+    display: none;
+  }
+}
+
+.mobileLogo,
+.desktopLogo {
+  display: inline-block;
+  height: 100%;
+}
+
+.mobileLogo {
+  width: 2rem;
+}
+
+@media screen and (min-width: 1128px) {
+  .mobileLogo {
+    display: none;
+  }
+}
+
+.desktopLogo {
+  width: 110px;
+}
+
+@media screen and (max-width: 1127px) {
+  .desktopLogo {
+    display: none;
+  }
+}
