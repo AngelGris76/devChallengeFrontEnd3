@@ -1,0 +1,21 @@
+.filtersContainer {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  border-bottom: 1px solid lightgray;
+  box-shadow: 0 1px 2px lightgray;
+}
+
+@media screen and (min-width: 744px) {
+  .filtersContainer {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  .filtersContainer {
+    padding-left: 9.5rem;
+    padding-right: 9.5rem;
+  }
+}

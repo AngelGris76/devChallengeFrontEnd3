@@ -1,0 +1,11 @@
+.filtersButtons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  height: 4.5rem;
+
+  transform: translateX(var(--filters-buttons-position));
+
+  color: lightgray;
+}

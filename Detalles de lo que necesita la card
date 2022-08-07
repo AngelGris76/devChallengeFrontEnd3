@@ -1,0 +1,52 @@
+Esto tiene que mostrar cada card...
+
+Tiene que tener un slide de imágenes (5 imágenes)
+
+ubicación
+puntaje
+tiempo de disponibilidad (de tal fecha a tal fecha)
+valor / noche
+
+
+
+
+Posible objeto...
+
+{
+    place:"",  // en que tipo de lugar está... islas, parques nacionales, piletas increibles....
+    build:"",  // house, apartment, hotel, gues houses
+    bedrooms:"",  // cantidad
+    bed:"",  // cantidad
+    bathroms:"", // cantidad
+    services: {wifi:"", kitchen:"", clothesWasher:"", clothesDryer:"", airConditioning:"", heating:"", tv:""},  // booleanos
+    images:[],  // 5 urls de imágenes
+    location:"",  // city
+    stars:"",
+    disponibility:{startTime:"", endTime:""},  // fechas
+    price:""
+}
+
+
+const PLACE_TYPE = {
+    ISLAND: { icon: IslandIcon, text: 'Islas' },
+    NATIONAL_PARK: { icon: NationalParkIcon, text: 'Parques nacionales' },
+    INCREDIBLE_POOL: { icon: PoolIcon, text: 'Piletas increibles' },
+    CABIN: { icon: CabinIcon, text: 'Cabañas' },
+    ARTIC: { icon: IceIcon, text: 'Artico' },
+    ALPINE: { icon: AlpineIcon, text: 'Alpinas' },
+    ECOLOGICAL: { icon: EcologicalIcon, text: 'Ecologicas' },
+    FARM: { icon: FarmIcon, text: 'Granjas' },
+    COUNTRY_HOUSES: { icon: CountryHouseIcon, text: 'Casas de campo' },
+    CAMPING: { icon: CampingIcon, text: 'Camping' },
+    BEACH: { icon: BeachIcon, text: 'Playa' },
+};
+
+
+
+
+const BUILDING_TYPE = {
+    HOUSE : 'Casa',
+    APARTMENT : 'Departamento',
+    HOTEL : 'Hotel',
+    GUEST_HOUSE : 'Casa de huespedes'
+}
