@@ -1,11 +1,64 @@
-.filtersButtons {
+.placeButtonsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 744px) {
+  .placeButtonsContainer {
+    width: 3rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+.placeFiltersButtons {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.5rem;
-  height: 4.5rem;
+  gap: 1.5rem;
 
-  transform: translateX(var(--filters-buttons-position));
+  height: 100%;
+
+  overflow: auto;
+  scrollbar-width: none;
 
   color: lightgray;
+}
+
+.placeFiltersButtons::-webkit-scrollbar {
+  display: none;
+}
+
+.leftButton,
+.rightButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  padding: 0.3rem 0.6rem;
+  background-color: white;
+  border-radius: 50%;
+
+  border: 1px solid lightgray;
+}
+
+.rightButton {
+  right: 0.2rem;
+}
+
+.leftButton {
+  left: 0.2rem;
+}
+
+.leftButton:hover,
+.rightButton:hover {
+  box-shadow: 0 2px 4px lightgray;
+}
+
+@media (hover: none) {
+  .leftButton,
+  .rightButton {
+    display: none;
+  }
 }

@@ -19,7 +19,6 @@ const MobileSearchButton = ({ ...props }) => {
             <span className={style.detailText}>¿Cuántos?</span>
           </span>
         </span>
-        <span></span>
       </button>
       <button className={style.filtersButton} {...props} data-option='filters'>
         {<FiltersIcon width='1.5rem' />}

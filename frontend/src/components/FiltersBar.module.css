@@ -1,9 +1,38 @@
 .filtersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  height: 4.5rem;
+
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
   border-bottom: 1px solid lightgray;
   box-shadow: 0 1px 2px lightgray;
+}
+
+.filtersButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: auto;
+  height: 60%;
+
+  background-color: transparent;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+.filtersButton:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 743px) {
+  .filtersButton {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 744px) {
