@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 0.5rem;
+}
+
+.imageList {
+  --index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  transform: translateX(var(--index));
+  transition: transform 0.2s;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  background-color: red;
+}
+
+.slideButtonLeft,
+.slideButtonRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (hover: none) {
+  .slideButtonLeft,
+  .slideButtonRight {
+    display: none;
+  }
+}
+
+.slideButtonLeft {
+  left: 0.2rem;
+}
+
+.slideButtonRight {
+  right: 0.2rem;
+}
+
+.pointsContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+}
+
+.point {
+  width: 0.8rem;
+  aspect-ratio: 1 / 1;
+
+  background-color: gray;
+
+  border-radius: 50%;
+}
+
+.pointActive {
+  transform: scale 1.5;
+  background-color: lightgray;
+}
