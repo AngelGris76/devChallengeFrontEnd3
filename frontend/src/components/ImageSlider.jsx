@@ -1,5 +1,6 @@
 import useImageSlide from '../hooks/useImageSlide';
 import style from './ImageSlider.module.css';
+import ImageSliderIndicator from './ImageSliderIndicator';
 
 const ImageSlider = ({ images, isHover }) => {
   const {
@@ -15,15 +16,6 @@ const ImageSlider = ({ images, isHover }) => {
 
   const imagesToShow = images.map((image, index) => (
     <img key={index} src={image} alt='' className={style.image} />
-  ));
-
-  const pointsToShow = images.map((image, index) => (
-    <span
-      key={index}
-      className={`${style.point} ${
-        index === actualImage * -1 ? style.pointActive : ''
-      }`}
-    ></span>
   ));
 
   return (
@@ -46,7 +38,7 @@ const ImageSlider = ({ images, isHover }) => {
           {'>'}
         </button>
       )}
-      <div className={style.pointsContainer}>{pointsToShow}</div>
+      <ImageSliderIndicator actualImage={actualImage} total={images.length} />
     </div>
   );
 };
